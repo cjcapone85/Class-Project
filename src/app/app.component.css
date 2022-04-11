@@ -1,6 +1,15 @@
+#jumbo {
+  padding: 0.5em 0.6em;
+  background-color: rgb(13, 63, 11);
+}
+
 h1 {
   padding: 30px;
   text-align: center;
   font-size: 4em;
-  color: royalblue;
+  color: rgb(13, 130, 169);
+}
+
+#input {
+
 }
