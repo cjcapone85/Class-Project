@@ -1,15 +1,21 @@
-#jumbo {
-  padding: 0.5em 0.6em;
-  background-color: rgb(13, 63, 11);
+.jumbotron {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg/1280px-Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg');
+  padding: 3em 0.6em;
+  /* background-color: rgb(13, 63, 11); */
 }
 
 h1 {
   padding: 30px;
   text-align: center;
   font-size: 4em;
-  color: rgb(13, 130, 169);
+  color: rgb(180, 185, 187);
 }
 
-#input {
+body {
+  background-color: gray;
+}
+
+input {
+  padding: auto;
 
 }
