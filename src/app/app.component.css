@@ -12,10 +12,13 @@ h1 {
 }
 
 body {
-  background-color: gray;
+  background: rgb(105, 106, 110);
 }
 
 input {
   text-align: left;
 }
 
+li {
+  margin-right: 1em;
+}

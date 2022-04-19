@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
+import { QueueComponent } from './queue/queue.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    QueueComponent
   ],
   imports: [
     BrowserModule,
