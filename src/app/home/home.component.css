@@ -1,0 +1,25 @@
+.jumbotron {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg/1280px-Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg');
+  background-size: cover;
+  padding: 3em 0.6em;
+}
+
+h1 {
+  padding: 30px;
+  text-align: center;
+  font-size: 4em;
+  color: rgb(180, 185, 187);
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-right: 1em;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

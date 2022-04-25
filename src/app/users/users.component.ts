@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+  @ViewChild('f') signupForm: NgForm;
 
   users = [
     {
@@ -21,5 +23,8 @@ export class UsersComponent {
       name: 'Rohan'
     }
   ];
-}
 
+  onSubmit() {
+    console.log(this.signupForm);
+  }
+}

@@ -1,1 +1,88 @@
+<link rel='stylesheet' href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Night_Stars.jpg/1280px-Night_Stars.jpg">
+<div id="jumbo" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>What's Playing?</h1>
+  </div>
+</div>
+
+<nav id="navbar" class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Home</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+
+      <li role="presentation"
+      routerLinkActive="active">
+      <a [routerLink]="['/users']">Users</a>
+    </li>
+    <li role="presentation"
+        routerLinkActive="active">
+        <a [routerLink]="['/queue']">Queue</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <input id="input" type="text" >
+  Genre 1
+</div>
+
+<div class="container">
+  <input id="input" type="text" >
+  Genre 2
+</div>
+
+<div class="container">
+  <input id="input" type="text" >
+  Genre 3
+</div>
+
+<div class="container">
+  <div class="col-xs-12 col-sm-10 col-md-3 col-sm-offset-1 col-md-offset-2">
+    <label for="genre">Genre 1</label>
+    <select
+    id="genre"
+    class="form-control"
+    ngModel
+    name="genre">
+    <option value="Action">Action</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Science Fiction">Science Fiction</option>
+    </select>
+
+    <label for="genre">Genre 2</label>
+    <select
+    id="genre"
+    class="form-control"
+    ngModel
+    name="genre">
+    <option value="Action">Action</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Science Fiction">Science Fiction</option>
+    </select>
+
+    <label for="genre">Genre 3</label>
+    <select
+    id="genre"
+    class="form-control"
+    ngModel
+    name="genre">
+    <option value="Action">Action</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Science Fiction">Science Fiction</option>
+    </select>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
 
