@@ -6,3 +6,7 @@ h3 {
 li {
   margin-right: 1em;
 }
+
+body {
+  background-color: rgb(4, 84, 64);
+}
