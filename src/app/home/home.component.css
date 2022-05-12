@@ -14,7 +14,7 @@ h1 {
   padding: 30px;
   text-align: center;
   font-size: 4em;
-  color: rgb(180, 185, 187);
+  color: rgb(238, 144, 13);
 }
 
 input {
@@ -50,5 +50,3 @@ input.ng-invalid.ng-touched {
 #genre {
   text-align: center;
 }
-
-/* https://unsplash.com/photos/OaVJQZ-nFD0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
