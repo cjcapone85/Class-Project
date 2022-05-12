@@ -2,3 +2,13 @@
 html {
   background-color: rgb(4, 84, 64);
 }
+
+
+:root {
+  --primary-color: #32366d;
+
+}
+
+body {
+  background-color: var(--primary-color);
+}

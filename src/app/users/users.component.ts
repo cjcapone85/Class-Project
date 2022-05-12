@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { UserSubmit } from '../user-submit.model';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -24,7 +26,7 @@ export class UsersComponent {
     }
   ];
 
-  onSubmit() {
+  onSubmit(postData: UserSubmit) {
     console.log(this.signupForm);
   }
 }

@@ -1,9 +1,11 @@
 .jumbotron {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg/1280px-Young_Stars_in_the_Rho_Ophiuchi_Cloud.jpg');
-  background-size: cover;
+  background-image: url('https://i0.wp.com/roughlydaily.com/wp-content/uploads/2021/03/megaplex.jpg?fit=1800%2C1200&ssl=1');
+  background-size: 1188px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 3em 0.6em;
+  margin-bottom: 0;
 }
-
 #body {
   background-color: rgb(4, 84, 64);
 }
@@ -28,7 +30,7 @@ input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
-/* navbar {
+/* .navbar {
   color: darkgoldenrod;
 } */
 
@@ -38,8 +40,15 @@ input.ng-invalid.ng-touched {
 
 #genreAlt {
   margin-bottom: 1em;
+  text-align: center;
 }
 
 #label {
   color: yellowgreen;
 }
+
+#genre {
+  text-align: center;
+}
+
+/* https://unsplash.com/photos/OaVJQZ-nFD0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
