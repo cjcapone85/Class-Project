@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { UserSubmit } from '../user-submit.model';
+// import { User } from './user.model';
 
 @Component({
   selector: 'app-users',
@@ -13,16 +14,16 @@ export class UsersComponent {
 
   users = [
     {
-      id: 1,
-      name: 'Chad'
+      name: 'Chad',
+      email: 'chad@chad.com'
     },
     {
-      id: 2,
-      name: 'Meagan'
+      name: 'Meagan',
+      email: 'meagan@meagan.com'
     },
     {
-      id: 3,
-      name: 'Rohan'
+      name: 'Rohan',
+      email: 'rohan@rohan.com'
     }
   ];
 
