@@ -32,7 +32,7 @@
     </div>
   </div>
 </div>
-
+<!--
 <div class="container">
   <input id="input" type="text" >
   Genre 1
@@ -46,7 +46,7 @@
 <div class="container">
   <input id="input" type="text" >
   Genre 3
-</div>
+</div> -->
 
 <div class="container">
   <div class="col-xs-12 col-sm-10 col-md-3 col-sm-offset-1 col-md-offset-2">
@@ -87,11 +87,43 @@
     <option value="Science Fiction">Science Fiction</option>
     </select>
 
-    <button (ngSubmit)="onSubmit()" class="btn btn-primary" type="submit">Submit</button>
+    <label id="label" for="genre">Genre 1</label>
+    <form
+    #searchForm="ngForm"
+    (ngSubmit)="onFetchMovies(searchForm.value.search)"
+    class="form-inline">
+      <div class="form-group mr-2">
+        <!-- SEARCH -->
+
+      <input
+      type="search"
+      class="form-control"
+      name="search"
+      id="search"
+      placeholder="Search"
+      [(ngModel)]="searchForm.value.search"
+      required
+    />
+    <!-- <select
+    id="genre"
+    class="form-control"
+    ngModel="searchForm.value.search"
+    name="genre"
+    required>
+    <option disabled selected value>Select a Genre</option>
+    <option value="Action">Action</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Science Fiction">Science Fiction</option>
+    </select> -->
+      </div>
+
+    <button (ngSubmit)="onSubmit()" class="btn btn-primary" type="submit" [disabled]="!searchForm.valid">Submit</button>
+  </form>
 
 
   </div>
 </div>
+
 
 <router-outlet></router-outlet>
 

@@ -12,7 +12,7 @@ import { UserSubmit } from '../user-submit.model';
 export class UsersComponent {
   @ViewChild('f') signupForm: NgForm;
 
-  users = [
+  myUsers: UserSubmit[]= [
     {
       name: 'Chad',
       email: 'chad@chad.com'
