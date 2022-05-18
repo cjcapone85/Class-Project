@@ -1,20 +1,28 @@
 .jumbotron {
-  background-image: url('https://i0.wp.com/roughlydaily.com/wp-content/uploads/2021/03/megaplex.jpg?fit=1800%2C1200&ssl=1');
+  background-image: url('https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg');
   background-size: 1600px 600px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 35% 70%;
   padding: 3em 0.6em;
   margin-bottom: 0;
 }
 #body {
-  background-color: rgb(4, 84, 64);
+  background-image: url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg");
+  background-position: center;
+  opacity: 75%;
 }
 
 h1 {
   padding: 30px;
   text-align: center;
   font-size: 4em;
-  color: rgb(238, 144, 13);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: red;
+
+}
+
+input#search.form-control {
+  background-color: lightgray;
 }
 
 input {
@@ -30,9 +38,14 @@ input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
-/* .navbar {
-  color: darkgoldenrod;
-} */
+a {
+  color: white;
+  font-weight: bold;
+}
+
+a.navbar-brand {
+  color: white;
+}
 
 .card {
   size: 20px 20px;
@@ -41,12 +54,15 @@ input.ng-invalid.ng-touched {
 #genreAlt {
   margin-bottom: 1em;
   text-align: center;
+  background-color: lightgray;
 }
 
 #label {
-  color: yellowgreen;
+  color: lightblue;
 }
 
 #genre {
   text-align: center;
+  background-color: lightgray;
 }
+

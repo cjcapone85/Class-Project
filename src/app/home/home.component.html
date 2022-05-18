@@ -1,7 +1,7 @@
 <link rel='stylesheet' href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Night_Stars.jpg/1280px-Night_Stars.jpg">
 <div id="jumbo" class="jumbotron jumbotron-fluid">
   <div>
-    <h1>What's Playing?</h1>
+    <h1>NEXT-FLIX</h1>
   </div>
 </div>
 
@@ -117,8 +117,14 @@
     </select> -->
       </div>
 
-    <button (ngSubmit)="onSubmit()" class="btn btn-primary" type="submit" [disabled]="!searchForm.valid">Submit</button>
+    <button
+    (ngSubmit)="onSubmit()"
+    class="btn btn-secondary"
+    type="submit"
+    [disabled]="!searchForm.valid"
+    >Submit</button>
   </form>
+
 
 
   </div>
