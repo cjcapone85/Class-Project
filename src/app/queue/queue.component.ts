@@ -6,12 +6,11 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './queue.component.html',
   styleUrls: ['./queue.component.css']
 })
+
 export class QueueComponent implements OnInit {
 
-
-  constructor(
-    private http: HttpClient,
-    ) {}
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
   }
