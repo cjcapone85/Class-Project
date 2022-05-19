@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root",
 })
 
-export class QueueService {
+export class SearchService {
   search:any;
   searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&page=1&include_adult=false"
   genreUrl='https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US'

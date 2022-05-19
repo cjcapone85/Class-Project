@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { QueueService } from '../queue/queue.service';
+import { SearchService } from '../search.service';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
   results:object;
 
-  constructor(private http: HttpClient, private searchResults: QueueService) {
+  constructor(private http: HttpClient, private searchResults: SearchService) {
     this.searchResults.results().subscribe((data) => {
       this.results=data;
     })
@@ -35,8 +35,6 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     console.log(this.onSubmit,'submit');
   }
-
-
 
 }
 
