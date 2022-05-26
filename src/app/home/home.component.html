@@ -88,22 +88,10 @@
       placeholder="Search"
       [(ngModel)]="searchForm.value.search"
       required
-    />
-    <!-- <select
-    id="genre"
-    class="form-control"
-    ngModel="searchForm.value.search"
-    name="genre"
-    required>
-    <option disabled selected value>Select a Genre</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select> -->
+      />
       </div>
 
-    <button
-    (ngSubmit)="onSubmit()"
+    <button (click)="onSubmit()"
     class="btn btn-danger"
     type="submit"
     [disabled]="!searchForm.valid"
@@ -111,6 +99,11 @@
   </form>
 
 
+
+  <!-- <ul *ngFor="let result of results" >
+    <li> {{ original_title }} </li>
+    <li> {{ poster_path }} </li>
+  </ul> -->
 
   </div>
 </div>

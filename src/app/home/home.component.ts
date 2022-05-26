@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
+import { delay, Observable } from 'rxjs';
+// import { SearchResults } from '../searchResults.model'
 
 
 @Component({
@@ -11,9 +13,12 @@ import { SearchService } from '../search.service';
 
 
 export class HomeComponent implements OnInit {
-  searchUrl="https://api.themoviedb.org/3/search/multi?api_key=<<api_key>>&language=en-US&page=1&include_adult=false"
+  topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
+  // searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&page=1&include_adult=false"
+  searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=gladiator&page=1&include_adult=false"
   genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
-  results:object;
+  results:object = this.http.get(this.searchUrl)
+
 
   constructor(private http: HttpClient, private searchResults: SearchService) {
     this.searchResults.results().subscribe((data) => {
@@ -22,18 +27,23 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.topMoviesUrl
   }
 
+
+
   onFetchMovies(searchInput: string) {
-    return this.http
-     .get(this.genreUrl)
-       .subscribe(posts => {
-         console.log(posts);
+    const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
+    this.http
+     .get(this.searchUrl)
+       .subscribe(results => {
+         console.log(results);
        });
    }
 
   onSubmit() {
-    console.log(this.onSubmit,'submit');
+    return this.http.get(this.searchUrl).subscribe
+    // console.log(this.onSubmit,'submit');
   }
 
 }

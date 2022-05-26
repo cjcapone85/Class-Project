@@ -1,5 +1,6 @@
 .jumbotron {
-  background-image: url('https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg');
+  background-color: black;
+  /* background-image: url('https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg'); */
   background-size: 1600px 600px;
   background-repeat: no-repeat;
   background-position: 35% 70%;
