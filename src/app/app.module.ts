@@ -9,11 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { QueueComponent } from './queue/queue.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UsersComponent }
-  // { path: 'users', component: UsersComponent }
 ];
 
 @NgModule({
@@ -21,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     UsersComponent,
     HomeComponent,
-    QueueComponent
+    QueueComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

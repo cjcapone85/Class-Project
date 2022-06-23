@@ -23,7 +23,7 @@
     </div>
   </div>
 </div>
-
+<div id="form">
 <div class="container">
   <div class="col-xs-12">
     <h3>Users</h3>
@@ -33,7 +33,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-2">
-      <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm.value)" #f="ngForm">
         <div id="user-data">
           <div class="form-group">
             <label for="user">User</label>
@@ -82,10 +82,11 @@
     <div class="list-group">
       <a style="cursor: pointer;"
       class="list-group-item"
-      *ngFor="let user of users">
-      {{user.id}} - {{ user.name }}
+      *ngFor="let user of myUsers">
+      {{ user.name }} - {{user.email}}
       </a>
     </div>
   </div>
+</div>
 </div>
 </div>
