@@ -13,11 +13,14 @@ import { delay, Observable } from 'rxjs';
 
 
 export class HomeComponent implements OnInit {
+  query = "";
+  apiKey:string = "74c8fbfdf29b471999f8a5ee6ec15a43";
   topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
-  // searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&page=1&include_adult=false"
-  searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=gladiator&page=1&include_adult=false"
+  // searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'name'}page=1&include_adult=false"
+  searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'name'}&page=1&include_adult=false`
   genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
-  results:object = this.http.get(this.searchUrl)
+  results = [];
+  // results:object = this.http.get(this.searchUrl)
 
 
   constructor(private http: HttpClient, private searchResults: SearchService) {
@@ -41,10 +44,14 @@ export class HomeComponent implements OnInit {
        });
    }
 
-  onSubmit() {
-    return this.http.get(this.searchUrl).subscribe
-    // console.log(this.onSubmit,'submit');
+   search() {
+    return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&language=en-US&query=${'name'}&page=1&include_adult=false`)
   }
+
+  // onSubmit() {
+  //   return this.http.get(this.searchUrl).subscribe
+  //   // console.log(this.onSubmit,'submit');
+  // }
 
 }
 

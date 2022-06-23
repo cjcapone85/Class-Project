@@ -1,4 +1,4 @@
-<link rel='stylesheet' href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Night_Stars.jpg/1280px-Night_Stars.jpg">
+<!-- <link rel='stylesheet' href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Night_Stars.jpg/1280px-Night_Stars.jpg"> -->
 <div id="jumbo" class="jumbotron jumbotron-fluid">
   <div>
     <h1>NEXT-FLIX</h1>
@@ -48,7 +48,7 @@
     <option value="Science Fiction">Science Fiction</option>
     </select>
 
-    <label id="label" for="genre">Genre 2</label>
+    <!-- <label id="label" for="genre">Genre 2</label>
     <select
     id="genre"
     class="form-control"
@@ -70,9 +70,10 @@
     <option value="Action">Action</option>
     <option value="Thriller">Thriller</option>
     <option value="Science Fiction">Science Fiction</option>
-    </select>
+    </select> -->
 
-    <label id="label" for="genre">Genre 1</label>
+
+    <!-- <label id="label" for="genre">Genre 1</label> -->
     <form
     #searchForm="ngForm"
     (ngSubmit)="onFetchMovies(searchForm.value.search)"
@@ -91,7 +92,7 @@
       />
       </div>
 
-    <button (click)="onSubmit()"
+    <button (click)="search()"
     class="btn btn-danger"
     type="submit"
     [disabled]="!searchForm.valid"

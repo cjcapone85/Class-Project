@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { QueueComponent } from './queue/queue.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './shared/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     UsersComponent,
     HomeComponent,
-    QueueComponent
+    QueueComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
