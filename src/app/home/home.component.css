@@ -35,6 +35,7 @@ h1 {
 
 input#search.form-control {
   background-color: lightgray;
+  filter: brightness(70%);
 }
 
 input {
@@ -53,6 +54,8 @@ input.ng-invalid.ng-touched {
 a {
   color: white;
   font-weight: bold;
+  filter: brightness(70%);
+  background-color: black;
 }
 
 a.navbar-brand {

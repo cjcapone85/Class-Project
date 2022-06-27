@@ -35,45 +35,7 @@
 
 <div class="container">
   <div class="col-xs-12 col-sm-10 col-md-3 col-sm-offset-1 col-md-offset-2">
-    <label id="label" for="genre">Genre 1</label>
-    <select
-    id="genre"
-    class="form-control"
-    ngModel
-    name="genre"
-    required>
-    <option disabled selected value>Select a Genre</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select>
 
-    <!-- <label id="label" for="genre">Genre 2</label>
-    <select
-    id="genre"
-    class="form-control"
-    ngModel
-    name="genre">
-    <option disabled selected value>Select Another Genre?</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select>
-
-    <label id="label" for="genre">Genre 3</label>
-    <select
-    id="genreAlt"
-    class="form-control"
-    ngModel
-    name="genre">
-    <option disabled selected value>Select Another Genre?</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select> -->
-
-
-    <!-- <label id="label" for="genre">Genre 1</label> -->
     <form
     #searchForm="ngForm"
     (ngSubmit)="onFetchMovies(searchForm.value.search)"
