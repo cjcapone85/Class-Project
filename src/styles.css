@@ -1,14 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-/* html {
-  background-color: rgb(4, 84, 64);
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 
-:root {
+/* :root {
   --primary-color: #32366d;
 
-}
+} */
 
 body {
-  background-color: var(--primary-color);
-} */
+  margin: 0px;
+  min-height: 100%;
+  min-width: 100%;
+}
