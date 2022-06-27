@@ -5,6 +5,15 @@
   background-position: 35% 70%;
   padding: 3em 0.6em;
   margin-bottom: 0;
+<<<<<<< Updated upstream
+=======
+}
+
+#body {
+  background-image: url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg");
+  background-position: center;
+  filter: brightness(130%);
+>>>>>>> Stashed changes
 
 }
 
