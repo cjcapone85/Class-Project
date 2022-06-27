@@ -1,15 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
-<<<<<<< Updated upstream
 import { Observable } from 'rxjs';
 import { Movies } from '../searchResults.model'
 import { MoviesService } from '../movies.service';
-=======
-import { delay, Observable } from 'rxjs';
-import { Movie } from '../searchResults.model';
-// import { SearchResults } from '../searchResults.model'
->>>>>>> Stashed changes
 
 
 @Component({
@@ -28,17 +22,11 @@ export class HomeComponent implements OnInit {
   watchedMovies: Movies[] = [];
   apiKey:string = "74c8fbfdf29b471999f8a5ee6ec15a43";
   topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
-<<<<<<< Updated upstream
   searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'batman'}&page=1&include_adult=false`
   http: any;
 
 
   // results:object = this.http.get(this.searchUrl)
-=======
-  searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'name'}&page=1&include_adult=false`
-  genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
-  results:Movie[] = [];
->>>>>>> Stashed changes
 
 
   constructor(private moviesService: MoviesService, private httpClient: HttpClient) {
@@ -64,6 +52,7 @@ export class HomeComponent implements OnInit {
 
 
   onFetchMovies(searchInput: string) {
+    const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
     this.http
      .get(this.searchUrl)
        .subscribe(results => {
@@ -86,3 +75,14 @@ export class HomeComponent implements OnInit {
 
 }
 
+// https://api.themoviedb.org/3/movie/550?api_key=74c8fbfdf29b471999f8a5ee6ec15a43
+
+// onFetchMovies(searchInput: string) {
+//   this.http
+//   .get('https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US')
+//     .subscribe(posts => {
+//       console.log(posts);
+//     });
+// }
+
+// https://api.themoviedb.org/3/discover/movie?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28&with_original_language=en
