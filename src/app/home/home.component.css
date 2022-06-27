@@ -11,17 +11,20 @@ html {
   background-position: 35% 70%;
   padding: 3em 0.6em;
   margin-bottom: 0;
+
 }
 #body {
   background-image: url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg");
   background-position: center;
   filter: brightness(130%);
 
+
 }
 
 h1 {
   padding: 30px;
   text-align: center;
+  text-decoration: underline;
   font-size: 5em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: red;

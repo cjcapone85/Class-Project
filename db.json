@@ -1,0 +1,39 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Avengers Endgame",
+      "poster_path": "https://static0.colliderimages.com/wordpress/wp-content/uploads/2019/03/avengers-endgame-poster.jpg",
+      "isWatched": "true",
+      "isFav" : true
+    },{
+
+      "id": 2,
+      "title": "Avatar 2",
+      "poster_path": "https://filmyhotspot.com/wp-content/uploads/2020/12/0bd2bdd6-a325-49bd-b3fb-eec0de17112e-768x768.jpg",
+      "isWatched": "true",
+      "isFav" : true
+    },{
+
+      "id": 3,
+      "title": "Black Widow",
+      "poster_path": "https://cosmicbook.news/images1/black-widow-poster.jpg",
+      "isWatched": "true",
+      "isFav" : true
+    },{
+
+      "id": 4,
+      "title": "Matrix Resurrections",
+      "poster_path": "https://image.tmdb.org/t/p/w1280/aLs8CRWr6mXTi7fTUzm5p66NXo7.jpg",
+      "isWatched": "true",
+      "isFav" : true
+    },{
+
+      "id": 5,
+      "title": "Army of Thieves",
+      "poster_path": "https://wegotthiscovered.com/wp-content/uploads/2021/07/army-of-thieves-dieter-character-poster.jpg",
+      "isWatched": "true",
+      "isFav" : true
+    }
+]
+}

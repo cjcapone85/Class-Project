@@ -1,0 +1,199 @@
+{
+  "page": 1,
+  "results": [
+  {
+  "adult": false,
+  "backdrop_path": "/xHrp2pq73oi9D64xigPjWW1wcz1.jpg",
+  "genre_ids": [
+  80,
+  9648,
+  53
+  ],
+  "id": 414906,
+  "media_type": "movie",
+  "original_language": "en",
+  "original_title": "The Batman",
+  "overview": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+  "popularity": 1224.907,
+  "poster_path": "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+  "release_date": "2022-03-01",
+  "title": "The Batman",
+  "video": false,
+  "vote_average": 7.8,
+  "vote_count": 5275
+  },
+  {
+  "backdrop_path": "/gpJZiTvklr5JN0mzpQwl99peQD7.jpg",
+  "first_air_date": "1966-01-12",
+  "genre_ids": [
+  10765,
+  35,
+  10759
+  ],
+  "id": 2287,
+  "media_type": "tv",
+  "name": "Batman",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Batman",
+  "overview": "Wealthy entrepreneur Bruce Wayne and his ward Dick Grayson lead a double life: they are actually crime fighting duo Batman and Robin. A secret Batpole in the Wayne mansion leads to the Batcave, where Police Commissioner Gordon often calls with the latest emergency threatening Gotham City. Racing to the scene of the crime in the Batmobile, Batman and Robin must (with the help of their trusty Bat-utility-belt) thwart the efforts of a variety of master criminals, including The Riddler, The Joker, Catwoman, and The Penguin.",
+  "popularity": 44.048,
+  "poster_path": "/1ZEJuuDh0Zpi5ELM3Zev0GBhQ3R.jpg",
+  "vote_average": 7.5,
+  "vote_count": 384
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/2va32apQP97gvUxaMnL5wYt4CRB.jpg",
+  "genre_ids": [
+  14,
+  28
+  ],
+  "id": 268,
+  "media_type": "movie",
+  "original_language": "en",
+  "original_title": "Batman",
+  "overview": "Batman must face his most ruthless nemesis when a deformed madman calling himself \"The Joker\" seizes control of Gotham's criminal underworld.",
+  "popularity": 41.905,
+  "poster_path": "/kbeWnmnHNEnuVej6wcjUv0eY6IL.jpg",
+  "release_date": "1989-06-23",
+  "title": "Batman",
+  "video": false,
+  "vote_average": 7.2,
+  "vote_count": 6339
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/hQrHN6WXERVw6XUMpfCgLfvrh5V.jpg",
+  "genre_ids": [
+  28,
+  80,
+  18
+  ],
+  "id": 272,
+  "media_type": "movie",
+  "original_language": "en",
+  "original_title": "Batman Begins",
+  "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+  "popularity": 55.931,
+  "poster_path": "/8RW2runSEc34IwKN2D1aPcJd2UL.jpg",
+  "release_date": "2005-06-10",
+  "title": "Batman Begins",
+  "video": false,
+  "vote_average": 7.7,
+  "vote_count": 17812
+  },
+  {
+  "backdrop_path": "/loFOim1ix4COcHGOoilftN2Zeb0.jpg",
+  "first_air_date": "2004-09-11",
+  "genre_ids": [
+  16,
+  10765,
+  9648,
+  10759
+  ],
+  "id": 2022,
+  "media_type": "tv",
+  "name": "The Batman",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "The Batman",
+  "overview": "Bruce Wayne, The Batman -- billionaire by day, crime fighter by night -- joined on occasion by Robin and Batgirl.",
+  "popularity": 40.438,
+  "poster_path": "/t5mbrd79o89pYB8OQ4QPFNkIRPm.jpg",
+  "vote_average": 7.8,
+  "vote_count": 328
+  },
+  {
+  "backdrop_path": "/pgmFKef8cqDwxoEShHYjPmYNLsi.jpg",
+  "first_air_date": "1992-09-05",
+  "genre_ids": [
+  10759,
+  16,
+  18,
+  9648
+  ],
+  "id": 2098,
+  "media_type": "tv",
+  "name": "Batman: The Animated Series",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Batman: The Animated Series",
+  "overview": "Vowing to avenge the murder of his parents, Bruce Wayne devotes his life to wiping out crime in Gotham City as the masked vigilante \"Batman\".",
+  "popularity": 56.19,
+  "poster_path": "/lBomQFW1vlm1yUYMNSbFZ45R4Ox.jpg",
+  "vote_average": 8.5,
+  "vote_count": 1170
+  },
+  {
+  "backdrop_path": "/4G1JEUOmrv0l0H1OjnO2GfWBu7b.jpg",
+  "first_air_date": "1999-01-10",
+  "genre_ids": [
+  16,
+  10759,
+  9648
+  ],
+  "id": 513,
+  "media_type": "tv",
+  "name": "Batman Beyond",
+  "origin_country": [
+  "US"
+  ],
+  "original_language": "en",
+  "original_name": "Batman Beyond",
+  "overview": "As new villains overrun Gotham City of the future, the aging Bruce Wayne hangs up the cape of the once invincible Batman. But when troubled teenager Terry McGinnis stumbles upon the Dark Knight's secret, a new alliance is forged. And a triumphant new Batman is born.",
+  "popularity": 31.31,
+  "poster_path": "/l1uj2DO6DyJzTmQS3i8SZZtYs0s.jpg",
+  "vote_average": 8.2,
+  "vote_count": 405
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/fsJgRuXzNnnXk5IVwVbBPdavaNX.jpg",
+  "genre_ids": [
+  28,
+  14
+  ],
+  "id": 364,
+  "media_type": "movie",
+  "original_language": "en",
+  "original_title": "Batman Returns",
+  "overview": "While Batman deals with a deformed man calling himself the Penguin, an employee of a corrupt businessman transforms into the Catwoman.",
+  "popularity": 27.697,
+  "poster_path": "/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+  "release_date": "1992-06-19",
+  "title": "Batman Returns",
+  "video": false,
+  "vote_average": 6.9,
+  "vote_count": 5291
+  },
+  {
+  "adult": false,
+  "backdrop_path": "/kU7ZiyeUwcpTkYj3UcxSqGdZmxY.jpg",
+  "genre_ids": [
+  16,
+  28
+  ],
+  "id": 618353,
+  "media_type": "movie",
+  "original_language": "en",
+  "original_title": "Batman: Death in the Family",
+  "overview": "Tragedy strikes the Batman's life again when Robin Jason Todd tracks down his birth mother only to run afoul of the Joker. An adaptation of the 1988 comic book storyline of the same name.",
+  "popularity": 56.197,
+  "poster_path": "/k8Q9ulyRE8fkvZMkAM9LPYMKctb.jpg",
+  "release_date": "2020-10-13",
+  "title": "Batman: Death in the Family",
+  "video": false,
+  "vote_average": 7.2,
+  "vote_count": 323
+  }
+  ],
+  "total_pages": 8,
+  "total_results": 159
+  }
