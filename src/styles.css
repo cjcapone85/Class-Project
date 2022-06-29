@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-/* html {
-  background-color: rgb(4, 84, 64);
+html {
+
+  background-color: black;
 }
 
 
-:root {
+/* :root {
   --primary-color: #32366d;
 
-}
+} */
 
 body {
-  background-color: var(--primary-color);
-} */
+  margin-bottom: 90px;
+}

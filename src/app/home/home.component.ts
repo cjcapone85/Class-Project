@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
-import { delay, Observable } from 'rxjs';
+import { delay, map, Observable } from 'rxjs';
+import { Movie } from '../searchResults.model';
+import { json } from 'express';
 // import { SearchResults } from '../searchResults.model'
 
 
@@ -13,39 +15,42 @@ import { delay, Observable } from 'rxjs';
 
 
 export class HomeComponent implements OnInit {
+  Img_URL = 'https://image.tmdb.org/t/p/w500';
   query = "";
   apiKey:string = "74c8fbfdf29b471999f8a5ee6ec15a43";
   topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
   // searchUrl="https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'name'}page=1&include_adult=false"
   searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'name'}&page=1&include_adult=false`
   genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
-  results = [];
+  results: any;
   // results:object = this.http.get(this.searchUrl)
 
 
   constructor(private http: HttpClient, private searchResults: SearchService) {
-    this.searchResults.results().subscribe((data) => {
-      this.results=data;
-    })
+
+
   }
 
   ngOnInit(): void {
-    this.topMoviesUrl
+
+    this.searchResults.results().subscribe((data) => {
+
+    })
+
   }
 
-
-
   onFetchMovies(searchInput: string) {
-    const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
     this.http
      .get(this.searchUrl)
-       .subscribe(results => {
-         console.log(results);
+       .subscribe(data => {
+          let results = Object.keys(data).map(a => data[a])
+          this.results=results[1];
        });
    }
 
    search() {
     return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&language=en-US&query=${'name'}&page=1&include_adult=false`)
+
   }
 
   // onSubmit() {

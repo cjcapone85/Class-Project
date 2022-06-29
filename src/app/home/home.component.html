@@ -1,4 +1,3 @@
-<!-- <link rel='stylesheet' href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Night_Stars.jpg/1280px-Night_Stars.jpg"> -->
 <div id="jumbo" class="jumbotron jumbotron-fluid">
   <div>
     <h1>NEXT-FLIX</h1>
@@ -22,11 +21,15 @@
 
       <li role="presentation"
       routerLinkActive="active">
-      <a [routerLink]="['/users']">Users</a>
+      <a
+      id="nav-selectors"
+      [routerLink]="['/users']">Users</a>
     </li>
     <li role="presentation"
         routerLinkActive="active">
-        <a [routerLink]="['/queue']">Queue</a>
+        <a
+        id="nav-selectors"
+        [routerLink]="['/queue']">Queue</a>
       </li>
       </ul>
     </div>
@@ -35,50 +38,12 @@
 
 <div class="container">
   <div class="col-xs-12 col-sm-10 col-md-3 col-sm-offset-1 col-md-offset-2">
-    <label id="label" for="genre">Genre 1</label>
-    <select
-    id="genre"
-    class="form-control"
-    ngModel
-    name="genre"
-    required>
-    <option disabled selected value>Select a Genre</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select>
-
-    <!-- <label id="label" for="genre">Genre 2</label>
-    <select
-    id="genre"
-    class="form-control"
-    ngModel
-    name="genre">
-    <option disabled selected value>Select Another Genre?</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select>
-
-    <label id="label" for="genre">Genre 3</label>
-    <select
-    id="genreAlt"
-    class="form-control"
-    ngModel
-    name="genre">
-    <option disabled selected value>Select Another Genre?</option>
-    <option value="Action">Action</option>
-    <option value="Thriller">Thriller</option>
-    <option value="Science Fiction">Science Fiction</option>
-    </select> -->
-
-
-    <!-- <label id="label" for="genre">Genre 1</label> -->
     <form
     #searchForm="ngForm"
     (ngSubmit)="onFetchMovies(searchForm.value.search)"
     class="form-inline">
       <div class="form-group mr-2">
+
         <!-- SEARCH -->
 
       <input
@@ -101,13 +66,60 @@
 
 
 
-  <!-- <ul *ngFor="let result of results" >
-    <li> {{ original_title }} </li>
-    <li> {{ poster_path }} </li>
-  </ul> -->
+  <ul *ngFor="let result of results"
+  class="results">
+    <li class="title"> {{ result.original_title }} </li>
+    <li class="poster"> {{ Img_URL+result.poster_path }} </li>
+    <li class="vote"> {{ result.vote_average }} </li>
+
+  </ul>
 
   </div>
 </div>
+
+<main id="main">
+  <div class="movie">
+    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
+
+    <div class="movie-info">
+      <h3>Movie Title</h3>
+      <span class="green">9.8</span>
+    </div>
+
+    <div class="overview">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
+    </div>
+  </div>
+
+  <div class="movie">
+    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
+
+    <div class="movie-info">
+      <h3>Movie Title</h3>
+      <span class="green">9.8</span>
+    </div>
+
+    <div class="overview">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
+    </div>
+  </div>
+
+  <div class="movie">
+    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
+
+    <div class="movie-info">
+      <h3>Movie Title</h3>
+      <span class="green">9.8</span>
+    </div>
+
+    <div class="overview">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
+    </div>
+  </div>
+<script src="script.js"></script>
+</main>
+
+
 
 
 <router-outlet></router-outlet>

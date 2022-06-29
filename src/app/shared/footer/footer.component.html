@@ -1,3 +1,43 @@
-<footer>
-<img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg">
-</footer>
+<!-- <footer>
+  <div class="container">
+<h5>TMDB</h5>
+</div>
+</footer> -->
+
+<footer class="footer">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg">
+    </div>
+
+
+    <div class="col-3">
+      <h5
+      id="github">Github</h5>
+      <ul
+      id="gitId">
+        <li
+        [routerLink]="" (click)="githubThree()">
+          Chad Capone
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col-6">
+      <ul>
+        <li id="attribute">
+          Results provided by TMDB
+        </li>
+        <li
+        id="tmdb"
+        style="cursor: pointer ;"
+        [routerLink]="" (click)="tmdb()">
+          TMDB.org
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  </footer>
