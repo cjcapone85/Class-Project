@@ -9,7 +9,14 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  tmdb() {
+    window.location.href='https://www.themoviedb.org/';
   }
 
+  githubThree() {
+    window.location.href='https://github.com/cjcapone85';
+  }
+
+  ngOnInit(): void {
+  }
 }
