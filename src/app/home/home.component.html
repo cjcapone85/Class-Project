@@ -74,16 +74,9 @@
     >Submit</button>
   </form>
 
-
-<!-- <div class="card">
-  <img src="img_avatar.png" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
-  </div>
-</div> -->
-
-<main *ngFor="let result of results">
+<div class="row">
+<div class="col-4"
+*ngFor="let result of results">
   <div class="movie">
     <img src={{Img_URL+result.poster_path}}>
     <div class="movie-info">
@@ -92,16 +85,13 @@
       <span class="green" *ngIf="result.vote_average >= 7">{{result.vote_average}}</span>
       <span class="orange" *ngIf="result.vote_average < 7 && result.vote_average >=5">{{result.vote_average}}</span>
       <span class="red" *ngIf="result.vote_average < 5">{{result.vote_average}}</span>
-
     </div>
-
     <div class="overview">
-
       <h4>{{ result.overview }}</h4>
-
     </div>
   </div>
-</main>
+</div>
+</div>
 
   </div>
 </div>
@@ -109,8 +99,3 @@
 <router-outlet></router-outlet>
 
 </div>
-
-
-<!-- <span class="green" *ngIf="result.vote_average >= 7">{{result.vote_average}}</span>
-      <span class="orange" *ngIf="result.vote_average > 7>=5">{{result.vote_average}}</span>
-      <span class="red" *ngIf="result.vote_average < 5">{{result.vote_average}}</span> -->
