@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
-import { Observable } from 'rxjs';
-import { Movies } from '../searchResults.model'
-import { MoviesService } from '../movies.service';
+import { delay, map, Observable } from 'rxjs';
+import { Movie } from '../searchResults.model';
+// import { SearchResults } from '../searchResults.model'
 
 
 @Component({
@@ -14,58 +14,68 @@ import { MoviesService } from '../movies.service';
 
 
 export class HomeComponent implements OnInit {
-  query = "";
-  name: string;
-  movieTitle: string;
-  movies: Movies[] = [];
-  yetToWatchMovies: Movies[] = [];
-  watchedMovies: Movies[] = [];
-  apiKey:string = "74c8fbfdf29b471999f8a5ee6ec15a43";
+
+  Img_URL = 'https://image.tmdb.org/t/p/w500';
+  base_URL = "https://api.themoviedb.org/3"
+  multiSearch = "/search/multi?"
+  apiKey:string = "api_key=74c8fbfdf29b471999f8a5ee6ec15a43";
+  query:string =`query=${""}`;
+
   topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
-  searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'batman'}&page=1&include_adult=false`
-  http: any;
+  searchUrl= this.base_URL+this.multiSearch+this.apiKey+this.query;
+  // searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'batman'}&page=1&include_adult=false`
+  genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
+  results: any;
 
 
+  main = document.getElementById('main');
   // results:object = this.http.get(this.searchUrl)
 
 
-  constructor(private moviesService: MoviesService, private httpClient: HttpClient) {
-    // this.searchResults.results().subscribe((data) => {
-    //   this.results=data;
-    // })
+  constructor(private http: HttpClient, private searchResults: SearchService) {
+
+
   }
 
   ngOnInit(): void {
-    this.moviesService.getMovies().subscribe((movies) => this.movies = movies);
-    // this.searchService.titleSearch().subscribe((movies) => this.movies = movies);
+
+    this.searchResults.results().subscribe((data) => {
+
+    })
+
   }
-
-  ngDoCheck(): void {
-    if (this.movies.length && !this.watchedMovies.length) {
-      this.yetToWatchMovies = this.movies.filter((m) => !m.isFav && !m.isWatched);
-      this.watchedMovies = this.movies.filter((m) => m.isWatched);
-    }
-  }
-
-  onFavClick(movie: Movies): void {}
-  onWatchedClick(movie: Movies): void {}
-
 
   onFetchMovies(searchInput: string) {
-    const formattedQuery = searchInput.split(' ').join('+').toLowerCase();
+
     this.http
      .get(this.searchUrl)
-       .subscribe(results => {
-         console.log(results);
+       .subscribe(data => {
+          let results = Object.keys(data).map(a => data[a])
+          this.results=results[1];
+          console.log(data);
        });
    }
 
-   search() {
-    return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&language=en-US&query=${'name'}&page=1&include_adult=false`)
+
+  imagePath() {
+    window.location.href=`${this.Img_URL}+${this.results.poster_path}`;
   }
 
-  // result(): Observable<Movie[]> {
-  //   return this.http.get<Movie[]>(this.genreUrl)
+  // getColor(vote_average) {
+  //   if(vote_average >= 8){
+  //     return 'green'
+  //   }else if(vote_average >= 5){
+  //     return 'orange'
+  //   }else{
+  //     return 'red'
+  //   }
+  // }
+
+}
+
+
+  //  search() {
+  //   return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&language=en-US&query=${'name'}&page=1&include_adult=false`)
   // }
 
   // onSubmit() {
@@ -73,9 +83,19 @@ export class HomeComponent implements OnInit {
   //   // console.log(this.onSubmit,'submit');
   // }
 
-}
+  // getColor(vote) {
+  //   if(vote >= 8){
+  //     return 'green'
+  //   }else if(vote >= 5){
+  //     return 'orange'
+  //   }else{
+  //     return 'red'
+  //   }
+  // }
 
-// https://api.themoviedb.org/3/movie/550?api_key=74c8fbfdf29b471999f8a5ee6ec15a43
+//  }
+
+
 
 // onFetchMovies(searchInput: string) {
 //   this.http
@@ -83,6 +103,5 @@ export class HomeComponent implements OnInit {
 //     .subscribe(posts => {
 //       console.log(posts);
 //     });
-// }
 
-// https://api.themoviedb.org/3/discover/movie?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28&with_original_language=en
+
