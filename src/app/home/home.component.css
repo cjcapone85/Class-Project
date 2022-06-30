@@ -33,7 +33,9 @@ form.form-inline {
 
 input#search.form-control {
   background-color: lightgray;
+
   align-content: center;
+
 }
 
 input {
@@ -75,6 +77,8 @@ input.ng-invalid.ng-touched {
 a {
   color: white;
   font-weight: bold;
+  filter: brightness(70%);
+  background-color: black;
 }
 
 #nav-selectors {
