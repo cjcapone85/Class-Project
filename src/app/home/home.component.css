@@ -1,13 +1,14 @@
 .jumbotron {
-  background-color: black;
+  background-image: url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg");
   background-size: 1600px 600px;
   background-repeat: no-repeat;
   background-position: 35% 70%;
   padding: 3em 0.6em;
   margin-bottom: 0;
 }
+
 #body {
-  background-image: url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg");
+  background-color: black;
   background-position: center;
   filter: brightness(130%);
 
@@ -24,8 +25,15 @@ h1 {
 
 }
 
+form.form-inline {
+  padding: 2rem;
+  justify-content: center;
+
+}
+
 input#search.form-control {
   background-color: lightgray;
+  align-content: center;
 }
 
 input {
@@ -37,12 +45,17 @@ li {
   margin-right: 1em;
   background-color: black;
 }
+
+
 li.title {
   background-color: white;
+  font-weight: bold;
 }
 
 li.poster {
   background-color: white;
+  width: 100%;
+  padding: 50px;
 }
 li.vote {
   background-color: white;
@@ -50,6 +63,9 @@ li.vote {
 
 ul.results {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 input.ng-invalid.ng-touched {
@@ -62,6 +78,7 @@ a {
 }
 
 #nav-selectors {
+  font-size: large;
   background-color: black;
 }
 
@@ -101,7 +118,7 @@ main {
   margin: 1rem;
   border-radius: 3px;
   box-shadow: .2px 4px 5px rgba(0,0,0,0.1);
-  background-color: #373b69;
+  background-color: rgb(61, 61, 61);
   position: relative;
   overflow: hidden;
 }
@@ -127,11 +144,11 @@ main {
   background-color: #22254b;
   padding: .25rem .5rem;
   border-radius: 3px;
-font-weight: bold;
+  font-weight: bold;
 }
 
 .movie-info span.green {
-  color: lightgreen;
+  color: rgb(4, 160, 4);
 }
 
 .movie-info span.orange {

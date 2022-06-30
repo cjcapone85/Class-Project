@@ -9,7 +9,7 @@
 <nav id="navbar" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Home</a>
+      <!-- <a href="#" class="navbar-brand">Home</a> -->
     </div>
   </div>
 </nav>
@@ -23,13 +23,21 @@
       routerLinkActive="active">
       <a
       id="nav-selectors"
+      [routerLink]="['/home']">Home</a>
+      </li>
+
+      <li role="presentation"
+      routerLinkActive="active">
+      <a
+      id="nav-selectors"
       [routerLink]="['/users']">Users</a>
-    </li>
-    <li role="presentation"
+      </li>
+
+      <li role="presentation"
         routerLinkActive="active">
-        <a
-        id="nav-selectors"
-        [routerLink]="['/queue']">Queue</a>
+      <a
+      id="nav-selectors"
+      [routerLink]="['/queue']">Queue</a>
       </li>
       </ul>
     </div>
@@ -37,7 +45,7 @@
 </div>
 
 <div class="container">
-  <div class="col-xs-12 col-sm-10 col-md-3 col-sm-offset-1 col-md-offset-2">
+  <div class="">
     <form
     #searchForm="ngForm"
     (ngSubmit)="onFetchMovies(searchForm.value.search)"
@@ -57,7 +65,7 @@
       />
       </div>
 
-    <button (click)="search()"
+    <button
     class="btn btn-danger"
     type="submit"
     [disabled]="!searchForm.valid"
@@ -65,63 +73,42 @@
   </form>
 
 
+<!-- <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div> -->
 
-  <ul *ngFor="let result of results"
-  class="results">
-    <li class="title"> {{ result.original_title }} </li>
-    <li class="poster"> {{ Img_URL+result.poster_path }} </li>
-    <li class="vote"> {{ result.vote_average }} </li>
+<main *ngFor="let result of results">
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="">
+    <div class="movie-info">
+      <h3>{{ result.original_title }}</h3>
+      <h3>{{ result.original_name }}</h3>
+      <span class="green" *ngIf="result.vote_average >= 7">{{result.vote_average}}</span>
+      <span class="orange" *ngIf="result.vote_average > 7>=5">{{result.vote_average}}</span>
+      <span class="red" *ngIf="result.vote_average < 5">{{result.vote_average}}</span>
 
-  </ul>
+    </div>
+
+    <div class="overview">
+
+      <h4>{{ result.overview }}</h4>
+
+    </div>
+  </div>
+</main>
 
   </div>
 </div>
-
-<main id="main">
-  <div class="movie">
-    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
-
-    <div class="movie-info">
-      <h3>Movie Title</h3>
-      <span class="green">9.8</span>
-    </div>
-
-    <div class="overview">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
-    </div>
-  </div>
-
-  <div class="movie">
-    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
-
-    <div class="movie-info">
-      <h3>Movie Title</h3>
-      <span class="green">9.8</span>
-    </div>
-
-    <div class="overview">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
-    </div>
-  </div>
-
-  <div class="movie">
-    <img src="https://getwallpapers.com/wallpaper/full/9/b/e/374783.jpg" alt="">
-
-    <div class="movie-info">
-      <h3>Movie Title</h3>
-      <span class="green">9.8</span>
-    </div>
-
-    <div class="overview">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit mollitia accusantium doloremque aliquam. Sit harum enim quia quasi ullam.
-    </div>
-  </div>
-<script src="script.js"></script>
-</main>
-
-
-
 
 <router-outlet></router-outlet>
 
 </div>
+
+
+<!-- <span class="green" *ngIf="result.vote_average >= 7">{{result.vote_average}}</span>
+      <span class="orange" *ngIf="result.vote_average > 7>=5">{{result.vote_average}}</span>
+      <span class="red" *ngIf="result.vote_average < 5">{{result.vote_average}}</span> -->
