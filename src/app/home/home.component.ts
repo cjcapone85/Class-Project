@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
   query:string =`query=${""}`;
 
   topMoviesUrl="https://api.themoviedb.org/3/trending/all/week?api_key=74c8fbfdf29b471999f8a5ee6ec15a43"
-  searchUrl= this.base_URL+this.multiSearch+this.apiKey+this.query;
-  // searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'batman'}&page=1&include_adult=false`
+  // searchUrl= this.base_URL+this.multiSearch+this.apiKey+this.query;
+  searchUrl=`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${'batman'}&page=1&include_adult=false`
   genreUrl="https://api.themoviedb.org/3/genre/movie/list?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US"
   results: any;
 
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
   onFetchMovies(searchInput: string) {
 
     this.http
-     .get(this.searchUrl)
+     .get(`https://api.themoviedb.org/3/search/multi?api_key=74c8fbfdf29b471999f8a5ee6ec15a43&language=en-US&query=${searchInput}&page=1&include_adult=false`)
        .subscribe(data => {
           let results = Object.keys(data).map(a => data[a])
           this.results=results[1];

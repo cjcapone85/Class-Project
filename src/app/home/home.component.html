@@ -85,12 +85,12 @@
 
 <main *ngFor="let result of results">
   <div class="movie">
-    <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="">
+    <img src={{Img_URL+result.poster_path}}>
     <div class="movie-info">
       <h3>{{ result.original_title }}</h3>
       <h3>{{ result.original_name }}</h3>
       <span class="green" *ngIf="result.vote_average >= 7">{{result.vote_average}}</span>
-      <span class="orange" *ngIf="result.vote_average > 7>=5">{{result.vote_average}}</span>
+      <span class="orange" *ngIf="result.vote_average < 7 && result.vote_average >=5">{{result.vote_average}}</span>
       <span class="red" *ngIf="result.vote_average < 5">{{result.vote_average}}</span>
 
     </div>
