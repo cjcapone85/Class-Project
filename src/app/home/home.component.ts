@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private http: HttpClient, private searchResults: SearchService) {
 
-
   }
 
   ngOnInit(): void {
@@ -51,6 +50,10 @@ export class HomeComponent implements OnInit {
           this.results=results[1];
           console.log(data);
        });
+   }
+
+   searchReset() {
+
    }
 
 
