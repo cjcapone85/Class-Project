@@ -33,6 +33,10 @@ button {
   margin: 3px;
 }
 
+button#addQueue {
+  align-content: center;
+}
+
 input#search.form-control {
   background-color: lightgray;
   align-content: center;
